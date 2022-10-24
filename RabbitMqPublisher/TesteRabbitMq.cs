@@ -33,7 +33,7 @@ public class TesteRabbitMq : ITesteRabbitMq
                 }
             });
 
-            _rabbitMqPublisher.BasicPublish(queueName, message, "", queueName, durable: true);
+            _rabbitMqPublisher.BasicPublish(queueName, message, "", queueName, persistent: true);
 
             var foregroundColor = Console.ForegroundColor;
             Console.ForegroundColor = ConsoleColor.Yellow;
